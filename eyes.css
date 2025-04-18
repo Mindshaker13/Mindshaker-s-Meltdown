@@ -1,0 +1,16 @@
+.auge {
+  position: relative;
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  border: 10px solid black;
+}
+.pupille {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30px;
+  height: 30px;
+  background-color: blue;
+  border-radius: 15px;
+}
