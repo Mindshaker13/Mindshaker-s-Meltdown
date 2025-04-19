@@ -100,7 +100,9 @@
     }
     
     .finger {
+        display: block;
         margin: auto;
+        image-orientation: center;
     }
     
     .substance {
@@ -114,6 +116,7 @@
     }
 
     .wrapper {
+        max-width: 3640px;
         margin: 0 auto;
         display: grid;
         grid-gap: 13px;
