@@ -29,7 +29,7 @@ body {
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: covermax-width: 100%height: auto;
+    background-size: covermax-width: 100%; height: auto;
     margin: 0;
     padding: 1em;
 }
