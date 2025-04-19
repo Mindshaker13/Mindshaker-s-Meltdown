@@ -80,7 +80,7 @@
     }
 }
 
-@media (pointer: coarse) {
+/*@media (pointer: coarse) {
     
     * {
         box-sizing: border-box;
@@ -128,7 +128,7 @@
     .wrapper div {
         border: 2px solid #ccc;
         border-radius: 5px;
-        /*background-color: rgba(220, 220, 220, .4);*/
+        background-color: rgba(220, 220, 220, .4);
         padding: 0;
         color: #ffffff;
         font-size: 3em;
@@ -160,4 +160,4 @@
         grid-row: 1/8;
     }
     
-}
+}*/
