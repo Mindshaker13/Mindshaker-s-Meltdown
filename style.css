@@ -114,7 +114,6 @@
     }
 
     .wrapper {
-        max-width: 1640px;
         margin: 0 auto;
         display: grid;
         grid-gap: 13px;
