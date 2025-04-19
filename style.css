@@ -18,11 +18,9 @@ body {
     margin: auto;
 }
 
-.finger {
-    margin: auto;
-}
-
 .finger img {
+    display: block;
+    margin: auto;
     width: 50%;
 }
 
