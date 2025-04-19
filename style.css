@@ -29,7 +29,7 @@ body {
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: covermax-width: 100%; height: auto;
+    background-size: covermax-width: 100%height: auto;
     margin: 0;
     padding: 1em;
 }
@@ -96,7 +96,12 @@ body {
 @media (orientation: portrait) {
     
     .substance {
-        padding-bottom: 10em;
+        background: url(images/MindshakerFlames2.jpg) no-repeat center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: covermax-width: 100%height: auto;
+        margin: 0;
     }
     
 }
