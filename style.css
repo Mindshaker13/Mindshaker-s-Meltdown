@@ -95,15 +95,11 @@ body {
 }
 @media (orientation: portrait) {
     
-    .substance {
-        background: url(images/MindshakerFlames2.jpg) no-repeat center fixed;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: covermax-width: 100%height: auto;
-        margin: 0;
+    .wrapper {
+        grid-auto-rows: minmax(300px, auto);
     }
-    .one {
+    
+    /*.one {
         grid-column: 1;
         grid-row: 1/20;
     }
@@ -126,5 +122,5 @@ body {
     .five {
         grid-column: 5;
         grid-row: 1/20;
-    }
+    }*/
 }
