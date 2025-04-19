@@ -19,8 +19,11 @@ body {
 }
 
 .finger {
-    width: 25%;
     margin: auto;
+}
+
+.finger img {
+    width: 50%;
 }
 
 .substance {
