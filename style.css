@@ -32,11 +32,7 @@ body {
 }
 
 .substance {
-    background: url(Caution1.jpg) no-repeat center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: covermax-width: 100%height: auto;
+    background-color: #000000;
     margin: 0;
     padding: 1em;
 }
@@ -71,7 +67,7 @@ body {
     transition: scale .2s;
     overflow: hidden;
     border: 2px solid #000000;
-    font-size: 6rem;
+    font-size: 6em;
     color: #990000;
 }
 
@@ -80,31 +76,17 @@ body {
     box-shadow:0 0 52px 26px rgba(0, 0, 0, 0.5);
 }
 
-#one {
+.one {
     overflow: hidden;
     position: relative;
 }
 
-#one img {
+.one img {
     height: 100%;
     transition: transform 0.5s ease-in-out;
 }
 
-#one:hover img {
-    transform: rotate(90deg);
-}
-
-#two {
-    overflow: hidden;
-    position: relative;444
-}
-
-#two img {
-    height: 100%;
-    transition: transform 0.5s ease-in-out;
-}
-
-#two:hover img {
+.one:hover img {
     transform: rotate(90deg);
 }
 
@@ -137,20 +119,81 @@ body {
         display: none;
     }
     
+    .grid {
+        font-size: .5em;
+    }
+    
 }
 @media (orientation: portrait) {
+    
+    .top {
+        z-index: 1;
+        position: fixed;
+        height: 14em;
+        width: 100%;
+        background-color: #000000;
+    }
+    
+    .finger img {
+        display: block;
+        margin-top: 13px;
+        width: 70%;
+    }
+    
+    .one img {
+        height: 100%;
+        transition: transform 0.5s ease-in-out;
+        transform: scale(1.4);
+        transform-origin: 0 0;
+    }
 
-    .substance {
-        background: url(images/Caution.jpg) no-repeat center fixed;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: covermax-width: 100%height: auto;
-        margin: 0;
+    .one:hover img {
+        transform: scale(1.5);
+        height: 80%;
     }
     
-    .wrapper {
-        grid-auto-rows: minmax(225px, auto);
+    .grid {
+        display: grid;
+        grid-template-columns: var(--col1) var(--col2);
+        grid-template-rows: var(--row1) var(--row2);
+        height: 90vh;
+        transition: all .2s;
+        background-color: var(--cl-main);
+        font-size: 1em;
+        margin-top: 12em;
+    }
+
+    .grid:has(.item:nth-child(2n+1):hover) {
+        --col1: 3fr;
+    }
+
+    .grid:has(.item:nth-child(2n+2):hover) {
+        --col2: 3fr;
+    }
+
+    .grid:has(.item:nth-child(n+1):nth-child(-n+2):where(:hover, :focus)) {
+        --row1: 3fr;
+         transform: scale(1.2, 2) translateY(23%);
     }
     
+    .grid:has(.item:nth-child(n+3):nth-child(-n+4):where(:hover, :focus)) {
+        --row2: 3fr;
+        transform: scale(1.2, 2) translateY(-19%);
+    }
+    
+    .item {
+        text-align: center;
+        display: grid;
+        align-content: center;
+        transition: scale .2s;
+        overflow: hidden;
+        border: 2px solid var(--cl-text);
+        background-color: var(--cl-main);
+        color: var(--cl-text);
+    }
+
+    .item:where(:hover, :focus) {
+        z-index: 2;
+    }
+
 }
