@@ -5,14 +5,11 @@
     --col4: 1fr;
 }
 
-* {
-    box-sizing: border-box;
-}
-
 body {
     background-color: #000000;
     margin: 0em;
     padding: 0em;
+    font-family: Papyrus, Arial, sans-serif;
 }
 
 .top {
@@ -69,6 +66,7 @@ body {
     border: 2px solid #000000;
     font-size: 6em;
     color: #990000;
+    position: relative;
 }
 
 .item:where(:hover, :focus) {
@@ -85,7 +83,6 @@ body {
     height: 100%;
     transition: transform 0.5s ease-in-out;
 }
-
 .one:hover img {
     transform: rotate(90deg);
 }
@@ -95,15 +92,63 @@ body {
     margin: 0em;
 }
 
-.image figcaption{
+.image figcaption {
     position: absolute;
-    top: 5%;
-    left: 10%;
-    -webkit-text-stroke: 2px #ffffff;
-    text-stroke: 2px #ffffff;
+    top: 2%;
+    left: 6%;
+    -webkit-text-stroke: 1px #ffffff;
     text-shadow: 4px 4px #000000;
+    background: rgba(113, 113, 113, 0.7);
+    border-radius: 26px;
+}
+
+.appear {
+    display: none;
+}
+
+.seclist {
+    font-size: .3em;
+    position: absolute;
+    top: 22%;
+    left: 20%;
+    color: #ffffff;
     background: rgba(113, 113, 113, 0.5);
-    border-radius: 25px;
+    border-radius: 26px;
+    list-style-type: none;
+}
+
+.image:hover + .appear {
+    display: grid;
+}
+
+.appear:hover {
+    display: grid;
+}
+
+.seclist p {
+    text-align: left;
+    padding: 0em 1em 0em 1em;
+}
+
+a:link {
+    color: #0000ff;
+}
+
+a:visited {
+    color: #990099;
+}
+
+a:hover {
+    color: #ff0000;
+    text-shadow: 3px 3px 3px #ffffff;
+}
+
+a:active {
+    color: #009900;
+}
+
+.shadow {
+    text-shadow: 2px 2px 2px #000000;
 }
 
 @media (pointer: fine) {
