@@ -173,6 +173,16 @@ audio {
         font-size: .5em;
     }
     
+    .finger img {
+        width: 30%;
+    }
+    
+    .seclist {
+        font-size: .5em;
+        top: 3%;
+        left: 25%;
+    }
+    
 }
 @media (orientation: portrait) {
     
