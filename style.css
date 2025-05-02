@@ -151,6 +151,11 @@ a:active {
     text-shadow: 2px 2px 2px #000000;
 }
 
+audio {
+    width: 100%;
+    height: 30px;
+}
+
 @media (pointer: fine) {
     
     .finger {
@@ -238,6 +243,21 @@ a:active {
 
     .item:where(:hover, :focus) {
         z-index: 2;
+    }
+    
+    .image figcaption {
+        font-size: .9em;
+        top: 6%;
+        left: 5%;
+    }
+    
+    .seclist {
+        top: 21%;
+        left: 2%;
+    }
+    
+    audio {
+        height: 60px;
     }
 
 }
