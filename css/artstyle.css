@@ -1,0 +1,87 @@
+:root {
+    --col1: 1fr;
+    --col2: 1fr;
+    --col3: 1fr;
+    --col4: 1fr;
+    --row1: 1fr;
+    --row2: 1fr;
+    --row3: 1fr;
+    --row4: 1fr;
+}
+
+body {
+    margin: 0em;
+    overflow: hidden;
+}
+
+h1 {
+    font-size: 2.5em;
+    float: right;
+    color: #ffffff;
+    margin-top: 1em;
+    padding-right: 13em;
+}
+
+.boxes {
+    display: grid;
+    grid-template-columns: var(--col1) var(--col2) var(--col3) var(--col4);
+    grid-template-rows: var(--row1) var(--row2) var(--row3) var(--row4);
+    height: 85vh;
+    transition: all .2s;
+    background-color: #000000;
+}
+
+.boxes:has(.stuff:nth-child(4n+1):hover) {
+    --col1: 3fr;
+}
+
+.boxes:has(.stuff:nth-child(4n+2):hover) {
+    --col2: 3fr;
+}
+
+.boxes:has(.stuff:nth-child(4n+3):hover) {
+    --col3: 3fr;
+}
+
+.boxes:has(.stuff:nth-child(4n+4):hover) {
+    --col4: 3fr;
+}
+
+.boxes:has(.stuff:nth-child(n+1):nth-child(-n+4):where(:hover, :focus)) {
+    --row1: 5fr;
+}
+.boxes:has(.stuff:nth-child(n+5):nth-child(-n+8):where(:hover, :focus)) {
+    --row2: 5fr;
+}
+
+.boxes:has(.stuff:nth-child(n+9):nth-child(-n+12):where(:hover, :focus)) {
+    --row3: 5fr;
+}
+
+.boxes:has(.stuff:nth-child(n+13):nth-child(-n+16):where(:hover, :focus)) {
+    --row4: 5fr;
+}
+
+.stuff {
+    text-align: center;
+    display: grid;
+    align-content: center;
+    transition: scale .2s;
+    overflow: hidden;
+    border: 2px solid #000000;
+    background-color: #330000;
+    font-size: 6rem;
+    color: #ffffff;
+    place-items: center;
+}
+
+.stuff:where(:hover, :focus) {
+    scale: 1.1;
+    z-index: 0;
+    box-shadow:0 0 50px 20px rgba(0, 0, 0, 0.5);
+}
+
+.stuff img {
+    height: 52vh;
+    object-fit: contain;    
+}
